@@ -16,7 +16,7 @@ package com.linked_List;
 	        System.out.println("Name: " + name);
 	        System.out.println("Marks: " + marks);
 	    }
-
+	    
 	    public static void main(String[] args) {
 	        Constructors mayur = new Constructors(1, "Mayur", 95.5);
 	        Constructors Pavan = new Constructors(2, "Pavan", 98.5);
