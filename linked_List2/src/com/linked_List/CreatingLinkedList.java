@@ -1,6 +1,6 @@
 package com.linked_List;
 
-class Node {
+ class Node {
 	int data;
 	Node next;
 
@@ -11,7 +11,7 @@ class Node {
 }
 
 // Creating Class for Logic 
-class Logic {
+ class Logic {
 	Node head;
 
 	void printLinkedList() {
