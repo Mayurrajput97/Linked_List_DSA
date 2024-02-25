@@ -3,17 +3,16 @@ package com.LinkedList25FEB;
 
 class LinkedList1 {
     Node head;
+    Node tail;
     void insertAtEnd(int newData) {
         Node temp = new Node(newData);
         if (head == null) {
             head = temp;
-            return;
         }
-        Node last = head;
-        while (last.next != null) {
-            last = last.next;
+        else {
+        	tail.next = temp;
         }
-        last.next = temp;
+        tail = temp;
     }
     void printLinkedList() {
         Node curr = head;
@@ -29,6 +28,7 @@ public class insertEnd {
         list.insertAtEnd(10);
         list.insertAtEnd(20);
         list.insertAtEnd(30);
+        list.insertAtEnd(40);
         
         list.printLinkedList();		
 	}
