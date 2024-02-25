@@ -9,6 +9,7 @@ class Node {
 		this.next = null;
 	}
 }
+
 // Creating Class for Logic 
 class Logic {
 	Node head;
@@ -20,22 +21,30 @@ class Logic {
 			curr = curr.next;
 		}
 	}
+
+	void add(int e) {
+		Node temp = new Node(e);
+		if (head == null) {
+			head = temp;
+		} else {
+			Node curr = head;
+			while (curr.next != null) {
+				curr = curr.next;
+			}
+			curr.next = temp;
+		}
+	}
 }
+
 public class CreatingLinkedList {
 	public static void main(String[] args) {
-		Logic l1 =new Logic();
-		// Creating List
-		Node p1 = new Node(10);
-		Node p2 = new Node(20);
-		Node p3 = new Node(30);
-		Node p4 = new Node(40);
+		Logic l1 = new Logic();
+		l1.add(10);
+		l1.add(20);
+		l1.add(30);
+		l1.add(40);
+		l1.add(50);
 
-		// Linking List 
-		p1.next = p2;
-		p2.next = p3;
-		p3.next = p4;
-		l1.head = p1;
-		
 		l1.printLinkedList();
 	}
 }
