@@ -11,6 +11,7 @@ class Node {
 }
 class Logic {
 	Node head;
+	Node tail;
 
 	void printLinkedList() {
 		Node curr = head;
@@ -19,18 +20,7 @@ class Logic {
 			curr = curr.next;
 		}
 	}
-	void add(int e) {
-		Node temp = new Node(e);
-		if (head == null) {
-			head = temp;
-		} else {
-			Node curr = head;
-			while (curr.next != null) {
-				curr = curr.next;
-			}
-			curr.next = temp;
-		}
-	}
+	
 	void addFirst(int e) {
 		Node temp = new Node(e);
 		if (head == null) {
@@ -40,6 +30,18 @@ class Logic {
 			head = temp;
 		}
 	}
+	void add(int e) {
+	    Node temp = new Node(e);
+	    if (head == null) {
+	        head = temp;
+	        tail = temp; // Update tail reference for the first node
+	    } else {
+	        tail.next = temp; // Add new node after the current tail
+	        tail = temp; // Update tail reference to the new node
+	    }
+	}
+
+	
 }
 
 public class AddFirst {

@@ -1,27 +1,8 @@
-package com.linked_List;
+package com.LinkedList25FEB;
 
- class Node {
-	int data;
-	Node next;
-
-	Node(int data) {
-		this.data = data;
-		this.next = null;
-	}
-}
-
-// Creating Class for Logic 
- class Logic {
+class LinkedList4 {
 	Node head;
 	Node tail;
-
-	void printLinkedList() {
-		Node curr = head;
-		while (curr != null) {
-			System.out.println(curr.data);
-			curr = curr.next;
-		}
-	}
 
 	void add(int e) {
 	    Node temp = new Node(e);
@@ -34,20 +15,35 @@ package com.linked_List;
 	    }
 	}
 
+
+	int getAt(int idx) {
+		Node temp = head;
+		for (int i = 1; i <= idx; i++) {
+			temp = temp.next;
+		}
+		return temp.data;
+	}
+
+	void printLinkedList() {
+		Node curr = head;
+		while (curr != null) {
+			System.out.print(curr.data + " ");
+			curr = curr.next;
+		}
+	}
 }
 
-public class CreatingLinkedList {
+public class GetAt {
 	public static void main(String[] args) {
-		Logic l1 = new Logic();
+		LinkedList4 l1 = new LinkedList4();
 		l1.add(10);
 		l1.add(20);
 		l1.add(30);
 		l1.add(40);
-		l1.add(50);
-		l1.add(60);
 
 		l1.printLinkedList();
 		System.out.println();
-		System.out.println(l1.tail.data);
+		System.out.println("The Element at Given Index is : " + l1.getAt(1));
 	}
+
 }
