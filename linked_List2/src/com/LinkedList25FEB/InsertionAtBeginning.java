@@ -1,10 +1,11 @@
 package com.LinkedList25FEB;
-
+// The Program refered by chatGPT
 	class LinkedList {
 	    Node head;
 
 	    void insertAtBeginning(int newData) {
 	        Node temp = new Node(newData);
+	        // I can write here if else for empty list 
 	        temp.next = head;
 	        head = temp;
 	    }
@@ -17,7 +18,7 @@ package com.LinkedList25FEB;
 	        }
 	    }
 	}
-
+	
 	public class InsertionAtBeginning {
 	    public static void main(String[] args) {
 	        LinkedList list = new LinkedList();
@@ -26,8 +27,6 @@ package com.LinkedList25FEB;
 	        list.insertAtBeginning(10);
 	        list.insertAtBeginning(40);
 
-
-	        System.out.println("Linked List after insertion at beginning:");
 	        list.printLinkedList();
 	    }
 	}

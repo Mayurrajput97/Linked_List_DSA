@@ -1,9 +1,29 @@
 package com.LinkedList25FEB;
+// Program Refered By Collage Wallah
+// class Node is present in another file
 
-// Node Class created in Different file
-class LinkedList3{
-	Node head;
-	void add(int e) {
+class LinkedList3 {
+    Node head;
+    Node tail;
+  
+    void printLinkedList() {
+        Node curr = head;
+        while (curr != null) {
+            System.out.print(curr.data + " ");
+            curr = curr.next;
+        }
+    }
+    void insetAt(int idx, int newdata) {
+    	Node t = new Node(newdata);
+    	Node temp = head;
+    	for(int i = 1; i< idx -1; i++) {
+    		temp = temp.next;
+    	}
+    	t.next = temp.next;
+    	temp.next = t;
+    }
+    // Add method just for seeing the output is working properly or not 
+    void add(int e) {
 		Node temp = new Node(e);
 		if (head == null) {
 			head = temp;
@@ -15,44 +35,14 @@ class LinkedList3{
 			curr.next = temp;
 		}
 	}
-	void printLinkedList() {
-        Node curr = head;
-        while (curr != null) {
-            System.out.print(curr.data + " ");
-            curr = curr.next;
-        }
-    }
-	void insertAtPosition(int e, int position) {
-        Node newNode = new Node(e);
-        if (position == 0) {
-            newNode.next = head;
-            head = newNode;
-            return;
-        }
-
-        Node curr = head;
-        for (int i = 0; i < position - 1 && curr != null; i++) {
-            curr = curr.next;
-        }
-
-        if (curr == null) {
-            System.out.println("Invalid position. Insertion failed.");
-            return;
-        }
-
-        newNode.next = curr.next;
-        curr.next = newNode;
-    }
-
 }
 public class InsertAtPosition {
 	public static void main(String[] args) {
-		LinkedList3 l1 = new LinkedList3();
-		l1.add(10);
-		l1.add(20);
-		l1.add(30);
-        l1.insertAtPosition(25, 2);
-
-		l1.printLinkedList();
+		LinkedList3 list = new LinkedList3();
+		list.add(10);
+		list.add(20);
+		list.add(30);
+        list.insetAt(1, 15);
+        list.printLinkedList();		
 	}
 }
