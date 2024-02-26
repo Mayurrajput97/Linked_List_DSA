@@ -32,7 +32,7 @@ class LinkedList5 {
         if (idx == 0) {
             head = head.next;
             if (head == null) {
-                tail = null; // Update tail when deleting the only node
+                tail = null; 
             }
             return;
         }
@@ -44,7 +44,7 @@ class LinkedList5 {
         
         temp.next = temp.next.next;
         if (temp.next == null) {
-            tail = temp; // Update tail when deleting the last node
+            tail = temp; 
         }
     }
 }
