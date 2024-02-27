@@ -53,9 +53,6 @@ public class Finding_Middle {
         l1.add(30);
         l1.add(40);
         l1.add(50);
-        l1.add(60);
-        l1.add(70);
-        l1.add(80);
         
         l1.printLinkedList();
         Node middle = l1.middleEle(l1.head);
