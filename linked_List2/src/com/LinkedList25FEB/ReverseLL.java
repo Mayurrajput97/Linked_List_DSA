@@ -23,13 +23,22 @@ class LinkedList10 {
 		}
 		System.out.println();
 	}
-	
-
+	void reversing() {
+	    Node prev = null;
+	    Node current = head;
+	    while (current != null) {
+	        Node later = current.next;  
+	        current.next = prev;
+	        prev = current;
+	        current = later;
+	    }
+	    head = prev;
+	}
 }
 
 public class ReverseLL {
 	public static void main(String[] args) {
-		LinkedList6 l1 = new LinkedList6();
+		LinkedList10 l1 = new LinkedList10();
 		l1.add(10);
 		l1.add(20);
 		l1.add(30);
@@ -37,5 +46,8 @@ public class ReverseLL {
 		l1.add(50);
 
 		l1.printLinkedList();
+        l1.reversing();
+		l1.printLinkedList();
+
 	}
 }

@@ -10,7 +10,7 @@ class LinkedList5 {
 			head = temp;
 			tail = temp; // Update tail reference for the first node
 		} else {
-			tail.next = temp; // Add new node after the current tail
+			tail.next = temp; 
 			tail = temp; // Update tail reference to the new node
 		}
 	}
