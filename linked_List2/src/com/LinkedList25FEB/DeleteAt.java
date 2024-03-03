@@ -57,7 +57,8 @@ public class DeleteAt {
 		l1.add(20);
 		l1.add(30);
 		l1.add(40);
-
+		
+		l1.printLinkedList();
 		l1.deleteAt(3);
 		System.out.println("After Deletion:");
 		l1.printLinkedList();
