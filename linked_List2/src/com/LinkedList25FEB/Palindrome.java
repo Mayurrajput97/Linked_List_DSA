@@ -24,17 +24,9 @@ class LinkedList9{
     }
     public boolean isPalindrome(Node head) {
     	
-    	
-    	
-		return false;
-    	
+		return false;	
     }
-
 }
-
-
-
-
 public class Palindrome {
 	public static void main(String[] args) {
 	}
