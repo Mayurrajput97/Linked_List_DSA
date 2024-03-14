@@ -46,12 +46,12 @@ class Logic {
 
 public class AddFirst {
 	public static void main(String[] args) {
-		Logic l1 = new Logic();
-		l1.add(10);
-		l1.add(20);
-		l1.add(30);
-		l1.addFirst(5);
+		Logic ll = new Logic();
+		ll.add(10);
+		ll.add(20);
+		ll.add(30);
+		ll.addFirst(5);
 
-		l1.printLinkedList();
+		ll.printLinkedList();
 	}
 }
